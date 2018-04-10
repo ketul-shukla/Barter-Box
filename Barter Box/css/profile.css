@@ -1,0 +1,24 @@
+
+.panelheading {
+	padding-left: 15px;
+	text-align: center;
+}
+.profilebody {
+	padding-top: 100px;
+	z-index:2;
+}
+.uploadbutton {
+	text-align: center;
+}
+.uploadimage {
+	text-align: center;
+	padding-bottom: 10px;
+}
+.panel {
+	background-color: #dddddd;
+}
+.panel-heading .panel-title h2{
+	padding :0;
+	margin:0;
+	text-align:center;
+}

@@ -1,0 +1,11 @@
+.panel {
+	background-color: #dddddd;
+}
+.panel-heading .panel-title h2{
+	padding :0;
+	margin:0;
+	text-align:center;
+}
+body {
+	background-image: url("assests/img/bgimg.jpg");
+}

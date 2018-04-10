@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<body ng-app="">
+<div class="container adjustment-container col-md-10 col-md-offset-1 outline color-background">
+    <h3>Post Your Product</h3> 
+    <hr> 
+    <form action="index.php" method="Post">
+      <div class="form-group">
+          <label for="productTitle">Product Title</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter product title">
+      </div>
+      <div class="form-group">
+          <label for="category">Category:</label>
+          <select name="category" ng-model="category" class="form-control">
+            <option>Select a Category</option>
+            <option value="book">Book</option>
+            <option value="furniture">Furniture</option>
+            <option value="fashion">Fashion</option>
+            <option value="electronics">Electronics</option>
+          </select>
+      </div>
+      <div ng-show="category == 'book'">
+        <div class="form-group">
+          <label for="author">Author:</label>
+          <input type="text" class="form-control" id="author" name="author" placeholder="Enter author">
+        </div>
+        <div class="form-group">
+          <label for="productTitle">Publication Year:</label>
+          <input type="text" class="form-control" id="publicationYear" name="publicationYear" placeholder="Enter Publication Year">
+        </div>
+        <div class="form-group">
+          <label for="author">Edition:</label>
+          <input type="number" class="form-control" id="version" name="version" placeholder="Enter version">
+        </div>
+      </div>
+      <div ng-show="category == 'furniture'">
+        <div class="form-group">
+          <label for="author">Color:</label>
+          <input type="text" class="form-control" id="color" name="color" placeholder="Enter color">
+        </div>
+        <div class="form-group">
+          <label for="author">Brand:</label>
+          <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter brand">
+        </div>
+      </div>
+      <div ng-show="category == 'electronics'">
+          <div class="form-group">
+            <label for="author">Brand</label>
+            <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter Brand">
+          </div>
+          <div class="form-group">
+            <label for="author">Color:</label>
+            <input type="text" class="form-control" id="color" name="color" placeholder="Enter color">
+          </div> 
+      </div>
+      <div ng-show="category == 'fashion'">
+        <div class="form-group">
+          <label for="author">Size:</label>
+          <input type="text" class="form-control" id="size" name="size" placeholder="Enter Size">
+        </div>
+        <div class="form-group">
+          <label for="author">Fabric:</label>
+          <input type="text" class="form-control" id="fabric" name="fabric" placeholder="Enter Fabric">
+        </div>
+        <div class="form-group">
+          <label for="author">Brand:</label>
+          <input type="text" class="form-control" id="brand" name="brand" placeholder="Enter brand">
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea class="form-control" rows="10" name="description"></textarea>
+      </div>
+      <div class="form-group">
+          <label for="photos">Upload Photos:</label><br>
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file1" onchange="readURL1(event)"/></label>  
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file2" onchange="readURL2(event)"/></label>
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file3" onchange="readURL3(event)"/></label>
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file4" onchange="readURL4(event)"/></label>
+          <div id="img1"></div>
+          <div id="img2"></div>
+          <div id="img3"></div>
+          <div id="img4"></div>
+      </div>
+      <div class="form-group">
+          <button type="submit" class="btn btn-primary">Post Product</button>
+      </div>
+      </form>
+<script type="text/javascript">
+        function readURL1(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img1').css('background-image', 'url(' + getImagePath + ')');
+        }
+        function readURL2(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img2').css('background-image', 'url(' + getImagePath + ')');
+        }
+        function readURL3(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img3').css('background-image', 'url(' + getImagePath + ')');
+        }
+        function readURL4(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img4').css('background-image', 'url(' + getImagePath + ')');
+        }
+</script>
+</body>
+</html>

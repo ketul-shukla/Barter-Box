@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Barter Box</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="stylesheet" type="text/css" href="../css/post.css">
+</head>
+<body ng-app="">
+<div class="container adjustment-container col-md-10 col-md-offset-1 outline color-background">
+    <h3>Post Your Product</h3> 
+    <hr> 
+    <form>
+      <div class="form-group">
+          <label for="productTitle">Product Title</label>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter product title">
+      </div>
+      <div class="form-group">
+          <label for="category">Category:</label>
+          <select name="category" ng-model="category" class="form-control">
+            <option>Select a Category</option>
+            <option value="book">Book</option>
+            <option value="furniture">Furniture</option>
+            <option value="fashion">Fashion</option>
+            <option value="electronics">Electronics</option>
+          </select>
+      </div>
+      <div ng-show="category == 'book'"><h1>hello</h1></div>
+      <div ng-show="category == 'furniture'"><h1>hello</h1></div>
+      <div ng-show="category == 'electronics'"><h1>hello</h1></div>
+      <div ng-show="category == 'fashion'"><h1>hello</h1></div>
+      <div class="form-group">
+          <label for="description">Description:</label>
+          <textarea class="form-control" rows="10" name="description"></textarea>
+      </div>
+      <div class="form-group">
+          <label for="photos">Upload Photos:</label><br>
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file1" onchange="readURL1(event)"/></label>  
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file2" onchange="readURL2(event)"/></label>
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file3" onchange="readURL3(event)"/></label>
+          <label class="btn btn-primary adjust-label">Browse<input type="file" id="" class="hide-button" name="file4" onchange="readURL4(event)"/></label>
+          <div id="img1"></div>
+          <div id="img2"></div>
+          <div id="img3"></div>
+          <div id="img4"></div>
+      </div>
+      <div class="form-group">
+      <button type="submit">Post Product</button>
+      </div>
+      </form>
+<script type="text/javascript">
+        function readURL1(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img1').css('background-image', 'url(' + getImagePath + ')');
+        }
+        function readURL2(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img2').css('background-image', 'url(' + getImagePath + ')');
+        }
+        function readURL3(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img3').css('background-image', 'url(' + getImagePath + ')');
+        }
+        function readURL4(event){
+         var getImagePath = URL.createObjectURL(event.target.files[0]);
+         $('#img4').css('background-image', 'url(' + getImagePath + ')');
+        }
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+.outline
+{
+	border:solid 1px #e5e5e5;
+}
+
+input[type=file]
+{
+	width: 0%;
+	display: inline-block;
+}
+
+#img1
+{
+    margin-top: 10px;
+	background-image:url('');
+    background-size:cover;
+    background-position: center;
+    height: 200px; 
+    width: 300px;
+    border: 1px solid #bbb;
+    display: inline-block;
+}
+
+#img2
+{   margin-top: 10px;
+	background-image:url('');
+    background-size:cover;
+    background-position: center;
+    height: 200px; 
+    width: 300px;
+    border: 1px solid #bbb;
+    display: inline-block;
+}
+
+#img3
+{   
+    margin-top: 10px;
+	background-image:url('');
+    background-size:cover;
+    background-position: center;
+    height: 200px; 
+    width: 300px;
+    border: 1px solid #bbb;
+    display: inline-block;
+}
+
+#img4
+{
+    margin-top: 10px;
+	background-image:url('');
+    background-size:cover;
+    background-position: center;
+    height: 200px; 
+    width: 300px;
+    border: 1px solid #bbb;
+    display: inline-block;
+}
+
+.adjust-bottom-margin
+{
+	margin-bottom: 20px;
+}
+
+.color-background
+{
+	background-color: #ffffff;
+}
+
+.hide-button
+{
+    visibility: hidden;
+}
+
+.adjust-label
+{
+    width: 300px;
+}

@@ -1,0 +1,57 @@
+		<div ng-init="datas = [
+				{ 
+					link: 'books_details.php',
+					url: 'assests/img/literature_1.jpg',
+			  	  description: 'A good book used for just one semester!',
+			  	  amount: '$45',
+			  	},
+			  	{ url: 'assests/img/fashion.jpg',
+			  	  description: 'Jacket not used for very low price!',
+			  	  amount: '$25',
+			  	},
+			  	{ url: 'assests/img/fashion.jpg',
+                  description: 'Jacket not used for very low price!',
+                  amount: '$25',
+                },
+                { url: 'assests/img/furniture1.jpg',
+                  description: 'Book Shelf for sale!',
+                  amount: '$55',
+                },
+                { url: 'assests/img/electronics1.jpg',
+                  description: 'Iphone 5 in a working condition!',
+                  amount: '$205',
+                },
+                { url: 'assests/img/fashion2.jpg',
+                  description: 'Gentleman suit for cheap!',
+                  amount: '$35',
+                },
+                { url: 'assests/img/furniture2.jpg',
+                  description: 'Relaxing couch!',
+                  amount: '$55',
+                },
+                { url: 'assests/img/electronics2.jpg',
+                  description: 'Gentleman suit in perfect fiting!',
+                  amount: '$55',
+                },
+                { url: 'assests/img/furniture3.jpg',
+                  description: 'Gentleman suit in perfect fiting!',
+                  amount: '$55',
+                },
+
+			]">
+			
+		</div>
+
+		<div class="container adjustment-container col-md-10 col-md-offset-1">
+			<div ng-repeat="data in datas | filter: search" class="col-md-3">
+		      <div class="thumbnail box-shadow">
+		        <a ng-href="{{data.link}}">
+		          <img ng-src="{{data.url}}" class="blockimg" alt="Image not available">
+		        </a>
+		        <div class="caption">
+		            <p>{{data.description}}</p>
+		            <p>{{data.amount}}</p>
+		        </div>
+		      </div>
+		    </div>
+		</div>
